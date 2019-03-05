@@ -1,0 +1,26 @@
+char = r'`1234567890-=~!@#$%^&*()_+qwertyuiop[]\QWERTYUIOP{}|asdfghjkl;\'ASDFGHJKL:"zxcvbnm,./ZXCVBNM<>?'
+char_list = list(char)
+a = char_list.pop(62)
+
+# pdfReader = PyPDF2.PdfFileReader(open('FLBL.pdf', 'rb'))
+circle = 1
+while circle <= 3:
+    index = [0 for i in range(circle)]
+    inner_circle = 0
+    temp_list = ["" for k in range(circle)]
+    while index[-1] < len(char_list):
+        
+        for i in range(len(index)):
+            temp_list = ["" for k in range(circle)]
+            index[0] += 1
+
+            for j in range(len(index)-1):
+                if index[j] == len(char):
+                    index[j] = 0
+                    index[j+1] += 1
+            for j in range(len(index)):
+                temp_list[j] = character_get(index[j])
+            password = str(temp_list)
+            print(password)
+        inner_circle += 1
+    circle += 1
