@@ -1,2 +1,2 @@
 # ForceDecode
-generate str for decode
+generate str for decode the passwords
